@@ -1,0 +1,1435 @@
+[
+    {
+        "id": "655a383f.d28688",
+        "type": "tab",
+        "label": "MQTT to Firebase & Blynk",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e53eb36.dc9b85",
+        "type": "tab",
+        "label": "Test Mode UI",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2fcd0b9b.e070b4",
+        "type": "tab",
+        "label": "Machine Learning",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "711823ae.3b618c",
+        "type": "firebase config",
+        "z": "",
+        "firebaseurl": "your_firebase_url",
+        "loginType": "none"
+    },
+    {
+        "id": "62316fa5.187ed",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Irrigation System - Live Mode",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9fac8f6c.40c3c",
+        "type": "ui_group",
+        "z": "",
+        "name": "Temperature Input",
+        "tab": "d08eca13.15e6a8",
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6ec149ab.f03fb8",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "b65d9af4.320528",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Irrigation System - IoT Ariel University",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "55bb7b9f.977214",
+        "type": "blynk-ws-client",
+        "z": "",
+        "name": "",
+        "path": "ws://blynk-cloud.com/websockets",
+        "key": "key",
+        "dbg_all": true,
+        "dbg_read": false,
+        "dbg_write": false,
+        "dbg_notify": false,
+        "dbg_mail": false,
+        "dbg_prop": false,
+        "dbg_sync": false,
+        "dbg_bridge": false,
+        "dbg_low": false,
+        "dbg_pins": "",
+        "multi_cmd": false,
+        "proxy_type": "no",
+        "proxy_url": "",
+        "enabled": true
+    },
+    {
+        "id": "8e403b51.f1cb08",
+        "type": "firebase admin",
+        "z": "",
+        "name": ""
+    },
+    {
+        "id": "3419ebaa.c73834",
+        "type": "ui_group",
+        "z": "",
+        "name": "Humiditiy",
+        "tab": "62316fa5.187ed",
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a430fa81.66f3a8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Irrigation",
+        "tab": "62316fa5.187ed",
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "438111e.aeb0bf",
+        "type": "ui_group",
+        "z": "",
+        "name": "Humidity Input",
+        "tab": "d08eca13.15e6a8",
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "457c0926.671548",
+        "type": "ui_group",
+        "z": "",
+        "name": "Irrigation System Status",
+        "tab": "62316fa5.187ed",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c22d1352.bdfaa",
+        "type": "ui_group",
+        "z": "",
+        "name": "Temperature",
+        "tab": "62316fa5.187ed",
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "330e5b41.622464",
+        "type": "ui_group",
+        "z": "",
+        "name": "Menu",
+        "tab": "",
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ac479391.0f5a1",
+        "type": "ui_group",
+        "z": "",
+        "name": "Group 2",
+        "tab": "",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "2ed9ab63.f17ec4",
+        "type": "ui_group",
+        "z": "",
+        "name": "Group 1",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "79965df6.96b224",
+        "type": "ui_group",
+        "z": "",
+        "name": "Group 3",
+        "tab": "",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "9b2a354c.227368",
+        "type": "ui_group",
+        "z": "",
+        "name": "Sensor",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "6f50259.6c699dc",
+        "type": "ui_group",
+        "z": "",
+        "name": "Lamp",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "d08eca13.15e6a8",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Irrigation System - Test Mode",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4f289f91.c244a",
+        "type": "ui_group",
+        "z": "",
+        "name": "Irrigation",
+        "tab": "d08eca13.15e6a8",
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "941ef7fd.980828",
+        "type": "mosca in",
+        "z": "655a383f.d28688",
+        "mqtt_port": 1883,
+        "mqtt_ws_port": 8080,
+        "name": "",
+        "username": "",
+        "password": "",
+        "dburl": "",
+        "x": 110,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "44a29115.35221",
+        "type": "mqtt in",
+        "z": "655a383f.d28688",
+        "name": "Temperature",
+        "topic": "temperature",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6ec149ab.f03fb8",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "6e2f25ba.15dc2c",
+                "683e8f2f.c319e",
+                "e5b9be6b.b3247",
+                "d104fefb.a4cb9",
+                "e0016ede.8bcae"
+            ]
+        ]
+    },
+    {
+        "id": "a27561be.4ade5",
+        "type": "mqtt in",
+        "z": "655a383f.d28688",
+        "name": "Humidity",
+        "topic": "humidity",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6ec149ab.f03fb8",
+        "x": 80,
+        "y": 340,
+        "wires": [
+            [
+                "7120f8.8f21ef08",
+                "d9d05060.ba991",
+                "3d51fe3d.832792",
+                "e9f8e0b4.a6a19",
+                "3383d45c.1197cc"
+            ]
+        ]
+    },
+    {
+        "id": "f27990a9.d1607",
+        "type": "debug",
+        "z": "655a383f.d28688",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 630,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "20130535.93e64a",
+        "type": "debug",
+        "z": "655a383f.d28688",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 570,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6e2f25ba.15dc2c",
+        "type": "firebase modify",
+        "z": "655a383f.d28688",
+        "name": "Firebase Realtime - Temperature",
+        "firebaseconfig": "711823ae.3b618c",
+        "childpath": "Temperature",
+        "method": "set",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "f27990a9.d1607"
+            ]
+        ]
+    },
+    {
+        "id": "7120f8.8f21ef08",
+        "type": "firebase modify",
+        "z": "655a383f.d28688",
+        "name": "Firebasea Realtime - Humidity",
+        "firebaseconfig": "711823ae.3b618c",
+        "childpath": "Humidity",
+        "method": "set",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 350,
+        "y": 340,
+        "wires": [
+            [
+                "20130535.93e64a"
+            ]
+        ]
+    },
+    {
+        "id": "683e8f2f.c319e",
+        "type": "blynk-ws-out-write",
+        "z": "655a383f.d28688",
+        "name": "Pin V0 - Temp",
+        "pin": "0",
+        "pinmode": 0,
+        "client": "55bb7b9f.977214",
+        "x": 300,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "d9d05060.ba991",
+        "type": "blynk-ws-out-write",
+        "z": "655a383f.d28688",
+        "name": "Pin V1 - Humiditiy",
+        "pin": "1",
+        "pinmode": 0,
+        "client": "55bb7b9f.977214",
+        "x": 310,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "95ed0ce0.28e43",
+        "type": "mqtt in",
+        "z": "655a383f.d28688",
+        "name": "LED",
+        "topic": "led",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "6ec149ab.f03fb8",
+        "x": 70,
+        "y": 520,
+        "wires": [
+            [
+                "fdf40835.ab28f8",
+                "4e18e209.7b7e4c",
+                "80975542.bb0c18",
+                "fd35b98b.964148",
+                "dad7d012.cf2ee"
+            ]
+        ]
+    },
+    {
+        "id": "fdf40835.ab28f8",
+        "type": "blynk-ws-out-write",
+        "z": "655a383f.d28688",
+        "name": "Pin V2 - LED",
+        "pin": "3",
+        "pinmode": 0,
+        "client": "55bb7b9f.977214",
+        "x": 290,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ce045c34.9128",
+        "type": "debug",
+        "z": "655a383f.d28688",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 530,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "4e18e209.7b7e4c",
+        "type": "firebase modify",
+        "z": "655a383f.d28688",
+        "name": "Firebase Realtime - LED",
+        "firebaseconfig": "711823ae.3b618c",
+        "childpath": "Irrigation",
+        "method": "set",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 330,
+        "y": 520,
+        "wires": [
+            [
+                "ce045c34.9128"
+            ]
+        ]
+    },
+    {
+        "id": "15ac8f9c.525f8",
+        "type": "inject",
+        "z": "2fcd0b9b.e070b4",
+        "name": "",
+        "topic": "",
+        "payload": "{\"BIGML_USERNAME\":\"USERNAME\",\"BIGML_API_KEY\":\"KEY\",\"BIGML_AUTH\":\"username=username;api_key=key\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 40,
+        "wires": [
+            [
+                "a9b62647.2ce7d8"
+            ]
+        ]
+    },
+    {
+        "id": "a9b62647.2ce7d8",
+        "type": "source",
+        "z": "2fcd0b9b.e070b4",
+        "item_analysis": "",
+        "project": "My First BigML Node-Red Source",
+        "remote": "https://static.bigml.com/csv/iris.csv",
+        "name": "Source",
+        "reify": false,
+        "synthetic": "",
+        "source_parser": "",
+        "file": "",
+        "disable_datetime": false,
+        "data": "",
+        "term_analysis": "",
+        "x": 220,
+        "y": 80,
+        "wires": [
+            [
+                "f67c8494.d66a48"
+            ]
+        ],
+        "icon": "node-red/leveldb.png"
+    },
+    {
+        "id": "f67c8494.d66a48",
+        "type": "dataset",
+        "z": "2fcd0b9b.e070b4",
+        "objective_field": "",
+        "origin": "",
+        "refresh_field_types": false,
+        "tags": "",
+        "name": "dataset",
+        "reify": false,
+        "term_limit": 0,
+        "excluded_fields": "",
+        "shared_hash": "",
+        "fields": "",
+        "refresh_objective": false,
+        "json_filter": "",
+        "category": 0,
+        "size": 0,
+        "webhook": "",
+        "lisp_filter": "",
+        "description": "My First BigML Node-Red dataset",
+        "input_fields": "",
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "fcea6346.44f23"
+            ]
+        ]
+    },
+    {
+        "id": "fcea6346.44f23",
+        "type": "ensemble",
+        "z": "2fcd0b9b.e070b4",
+        "objective_field": "",
+        "weight_field": "",
+        "range": 0,
+        "random_candidates": 0,
+        "boosting": "",
+        "random_candidate_ratio": 0,
+        "replacement": false,
+        "tags": "",
+        "ordering": 0,
+        "optimize": false,
+        "name": "ensemble",
+        "reify": false,
+        "seed": "",
+        "randomize": false,
+        "excluded_fields": "",
+        "missing_splits": false,
+        "balance_objective": false,
+        "stat_pruning": true,
+        "fields": "",
+        "split_candidates": 32,
+        "depth_threshold": 512,
+        "category": 0,
+        "webhook": "",
+        "number_of_models": 10,
+        "node_threshold": 512,
+        "max_training_time": 1800,
+        "model_candidates": 128,
+        "objective_weights": "",
+        "out_of_bag": false,
+        "description": "My First BigML Node-Red Ensemble",
+        "sample_rate": 1,
+        "support_threshold": 0,
+        "input_fields": "",
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "243c9a5e.30b556"
+            ]
+        ]
+    },
+    {
+        "id": "243c9a5e.30b556",
+        "type": "reify",
+        "z": "2fcd0b9b.e070b4",
+        "name": "Reify",
+        "input_keypath": "",
+        "output_keypath": "",
+        "reify": true,
+        "x": 490,
+        "y": 200,
+        "wires": [
+            [
+                "b0354ed2.1782"
+            ]
+        ],
+        "inputLabels": [
+            "ensemble"
+        ]
+    },
+    {
+        "id": "b0354ed2.1782",
+        "type": "debug",
+        "z": "2fcd0b9b.e070b4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 590,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "3d51fe3d.832792",
+        "type": "function",
+        "z": "655a383f.d28688",
+        "name": "Modify Payload",
+        "func": "var originalPayload = msg.payload;\nvar newPayload = {};\nnewPayload.Humidity = originalPayload;\nmsg.payload = newPayload\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "c64f5e0f.12e12"
+            ]
+        ]
+    },
+    {
+        "id": "c64f5e0f.12e12",
+        "type": "Firestore out",
+        "z": "655a383f.d28688",
+        "name": "Firestore Cloud - Humidity",
+        "collection": "Humidity",
+        "document": "",
+        "operation": "add",
+        "admin": "8e403b51.f1cb08",
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "783f1fa.32d4ee"
+            ]
+        ]
+    },
+    {
+        "id": "783f1fa.32d4ee",
+        "type": "debug",
+        "z": "655a383f.d28688",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 670,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "e5b9be6b.b3247",
+        "type": "function",
+        "z": "655a383f.d28688",
+        "name": "Modify Payload",
+        "func": "var originalPayload = msg.payload;\nvar newPayload = {};\nnewPayload.Temperature = originalPayload;\nmsg.payload = newPayload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "4837c4d5.3766ac"
+            ]
+        ]
+    },
+    {
+        "id": "4837c4d5.3766ac",
+        "type": "Firestore out",
+        "z": "655a383f.d28688",
+        "name": "Temperature",
+        "collection": "Temperature",
+        "document": "",
+        "operation": "add",
+        "admin": "8e403b51.f1cb08",
+        "x": 490,
+        "y": 60,
+        "wires": [
+            [
+                "9a2eee6f.a7551"
+            ]
+        ]
+    },
+    {
+        "id": "9a2eee6f.a7551",
+        "type": "debug",
+        "z": "655a383f.d28688",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 690,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "80975542.bb0c18",
+        "type": "function",
+        "z": "655a383f.d28688",
+        "name": "Modify Payload",
+        "func": "var originalPayload = msg.payload;\nvar newPayload = {};\nnewPayload.Irrigation = originalPayload;\nmsg.payload = newPayload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 220,
+        "y": 400,
+        "wires": [
+            [
+                "86a031a4.cb474"
+            ]
+        ]
+    },
+    {
+        "id": "86a031a4.cb474",
+        "type": "Firestore out",
+        "z": "655a383f.d28688",
+        "name": "Firestore Cloud - Irrigation",
+        "collection": "Irrigation",
+        "document": "",
+        "operation": "add",
+        "admin": "8e403b51.f1cb08",
+        "x": 470,
+        "y": 420,
+        "wires": [
+            [
+                "7cde34f6.55c81c"
+            ]
+        ]
+    },
+    {
+        "id": "7cde34f6.55c81c",
+        "type": "debug",
+        "z": "655a383f.d28688",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 630,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "27dcc88d.9732a8",
+        "type": "ui_slider",
+        "z": "e53eb36.dc9b85",
+        "name": "",
+        "label": "Temperature",
+        "tooltip": "",
+        "group": "9fac8f6c.40c3c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "min": 0,
+        "max": "50",
+        "step": 1,
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "8249e427.a6fac8",
+                "a5eb7379.3f8a"
+            ]
+        ]
+    },
+    {
+        "id": "6b1b1a07.b42104",
+        "type": "ui_slider",
+        "z": "e53eb36.dc9b85",
+        "name": "",
+        "label": "Humidity",
+        "tooltip": "",
+        "group": "438111e.aeb0bf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "min": 0,
+        "max": "100",
+        "step": 1,
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "8e7e28b5.f38268",
+                "dcbc9088.49d95"
+            ]
+        ]
+    },
+    {
+        "id": "13daf2bf.26319d",
+        "type": "mqtt out",
+        "z": "e53eb36.dc9b85",
+        "name": "",
+        "topic": "flower/lamp",
+        "qos": "2",
+        "retain": "",
+        "broker": "6ec149ab.f03fb8",
+        "x": 670,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "b70ba59f.ddd6d8",
+        "type": "function",
+        "z": "e53eb36.dc9b85",
+        "name": "",
+        "func": "if(msg.payload < \"30\"){\n    msg.payload = \"1\";\n}\nelse{\n    msg.payload = \"0\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 540,
+        "wires": [
+            [
+                "13daf2bf.26319d",
+                "404f27f4.48f528"
+            ]
+        ]
+    },
+    {
+        "id": "558c5fe3.6528a",
+        "type": "function",
+        "z": "e53eb36.dc9b85",
+        "name": "",
+        "func": "if(msg.payload > \"30\"){\n    msg.payload = \"1\";\n}\nelse{\n    msg.payload = \"0\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 460,
+        "wires": [
+            [
+                "13daf2bf.26319d",
+                "93a21fc.9b928e"
+            ]
+        ]
+    },
+    {
+        "id": "8249e427.a6fac8",
+        "type": "ui_gauge",
+        "z": "e53eb36.dc9b85",
+        "name": "Temperature Gauge",
+        "group": "9fac8f6c.40c3c",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 400,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "8e7e28b5.f38268",
+        "type": "ui_gauge",
+        "z": "e53eb36.dc9b85",
+        "name": "Humidity Gauge",
+        "group": "438111e.aeb0bf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 380,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a5eb7379.3f8a",
+        "type": "firebase modify",
+        "z": "e53eb36.dc9b85",
+        "name": "Firebase Realtime - Temperature",
+        "firebaseconfig": "711823ae.3b618c",
+        "childpath": "Temperature",
+        "method": "set",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 420,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dcbc9088.49d95",
+        "type": "firebase modify",
+        "z": "e53eb36.dc9b85",
+        "name": "Firebasea Realtime - Humidity",
+        "firebaseconfig": "711823ae.3b618c",
+        "childpath": "Humidity",
+        "method": "set",
+        "value": "msg.payload",
+        "priority": "msg.priority",
+        "x": 410,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4147d3f9.01affc",
+        "type": "firebase.on",
+        "z": "e53eb36.dc9b85",
+        "name": "Get_Temperature_Value",
+        "firebaseconfig": "711823ae.3b618c",
+        "childpath": "Temperature",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 210,
+        "y": 440,
+        "wires": [
+            [
+                "558c5fe3.6528a"
+            ]
+        ]
+    },
+    {
+        "id": "740178a9.c5b8f8",
+        "type": "firebase.on",
+        "z": "e53eb36.dc9b85",
+        "name": "Get_Humidity_Value",
+        "firebaseconfig": "711823ae.3b618c",
+        "childpath": "Humidity",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 190,
+        "y": 520,
+        "wires": [
+            [
+                "b70ba59f.ddd6d8"
+            ]
+        ]
+    },
+    {
+        "id": "b2003771.c34f68",
+        "type": "ui_gauge",
+        "z": "e53eb36.dc9b85",
+        "name": "Irrigation Gauge",
+        "group": "4f289f91.c244a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Irrigation",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 400,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "6693f393.0f627c",
+        "type": "firebase.on",
+        "z": "e53eb36.dc9b85",
+        "name": "Get_Irrigation_Value",
+        "firebaseconfig": "711823ae.3b618c",
+        "childpath": "Irrigation",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "b2003771.c34f68"
+            ]
+        ]
+    },
+    {
+        "id": "e2ceea24.398a18",
+        "type": "function",
+        "z": "2fcd0b9b.e070b4",
+        "name": "Modify Payload",
+        "func": "var originalPayload = msg.payload;\nvar newPayload = {};\nnewPayload.Temperature = originalPayload;\nmsg.payload = newPayload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 200,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fac53cc4.0a93e",
+        "type": "debug",
+        "z": "2fcd0b9b.e070b4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 710,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "dbc48b87.c2de28",
+        "type": "file",
+        "z": "2fcd0b9b.e070b4",
+        "name": "",
+        "filename": "C:\\Users\\sagik\\.node-red\\data2.csv",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 620,
+        "y": 320,
+        "wires": [
+            [
+                "fac53cc4.0a93e"
+            ]
+        ]
+    },
+    {
+        "id": "3375b625.b4adea",
+        "type": "csv",
+        "z": "2fcd0b9b.e070b4",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": false,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "temp,humidity",
+        "skip": "1",
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "dbc48b87.c2de28"
+            ]
+        ]
+    },
+    {
+        "id": "d65fc27e.06b75",
+        "type": "function",
+        "z": "2fcd0b9b.e070b4",
+        "name": "Modify Payload",
+        "func": "var originalPayload = msg.payload;\nvar newPayload = {};\nnewPayload.Humidity = originalPayload;\nmsg.payload = newPayload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 200,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7d19a86.4f6758",
+        "type": "Firestore out",
+        "z": "2fcd0b9b.e070b4",
+        "name": "",
+        "collection": "Humidity",
+        "document": "",
+        "operation": "add",
+        "admin": "8e403b51.f1cb08",
+        "x": 390,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d104fefb.a4cb9",
+        "type": "ui_chart",
+        "z": "655a383f.d28688",
+        "name": "Temperature Chart",
+        "group": "c22d1352.bdfaa",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 890,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e9f8e0b4.a6a19",
+        "type": "ui_chart",
+        "z": "655a383f.d28688",
+        "name": "Humidity Chart",
+        "group": "3419ebaa.c73834",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 880,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd35b98b.964148",
+        "type": "ui_chart",
+        "z": "655a383f.d28688",
+        "name": "Irrigation Chart",
+        "group": "a430fa81.66f3a8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "useOldStyle": false,
+        "outputs": 1,
+        "x": 880,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0016ede.8bcae",
+        "type": "ui_gauge",
+        "z": "655a383f.d28688",
+        "name": "Temperature Gauge",
+        "group": "c22d1352.bdfaa",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 900,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "3383d45c.1197cc",
+        "type": "ui_gauge",
+        "z": "655a383f.d28688",
+        "name": "Humidity Gauge",
+        "group": "3419ebaa.c73834",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 880,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "dad7d012.cf2ee",
+        "type": "ui_gauge",
+        "z": "655a383f.d28688",
+        "name": "Irrigation Gauge",
+        "group": "a430fa81.66f3a8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Irrigation",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 880,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "93a21fc.9b928e",
+        "type": "ui_text",
+        "z": "e53eb36.dc9b85",
+        "group": "9fac8f6c.40c3c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 570,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "404f27f4.48f528",
+        "type": "ui_text",
+        "z": "e53eb36.dc9b85",
+        "group": "438111e.aeb0bf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 580,
+        "y": 600,
+        "wires": []
+    }
+]
