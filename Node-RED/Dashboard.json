@@ -24,7 +24,7 @@
         "id": "711823ae.3b618c",
         "type": "firebase config",
         "z": "",
-        "firebaseurl": "your_firebase_url",
+        "firebaseurl": "yourprojectname",
         "loginType": "none"
     },
     {
@@ -171,7 +171,7 @@
         "z": "",
         "name": "",
         "path": "ws://blynk-cloud.com/websockets",
-        "key": "key",
+        "key": "yourkey",
         "dbg_all": true,
         "dbg_read": false,
         "dbg_write": false,
@@ -357,7 +357,6 @@
         "wires": [
             [
                 "6e2f25ba.15dc2c",
-                "683e8f2f.c319e",
                 "e5b9be6b.b3247",
                 "d104fefb.a4cb9",
                 "e0016ede.8bcae"
@@ -378,7 +377,6 @@
         "wires": [
             [
                 "7120f8.8f21ef08",
-                "d9d05060.ba991",
                 "3d51fe3d.832792",
                 "e9f8e0b4.a6a19",
                 "3383d45c.1197cc"
@@ -396,8 +394,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 630,
-        "y": 160,
+        "x": 650,
+        "y": 120,
         "wires": []
     },
     {
@@ -411,8 +409,8 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 570,
-        "y": 340,
+        "x": 650,
+        "y": 300,
         "wires": []
     },
     {
@@ -425,8 +423,8 @@
         "method": "set",
         "value": "msg.payload",
         "priority": "msg.priority",
-        "x": 360,
-        "y": 160,
+        "x": 380,
+        "y": 120,
         "wires": [
             [
                 "f27990a9.d1607"
@@ -443,37 +441,13 @@
         "method": "set",
         "value": "msg.payload",
         "priority": "msg.priority",
-        "x": 350,
-        "y": 340,
+        "x": 370,
+        "y": 300,
         "wires": [
             [
                 "20130535.93e64a"
             ]
         ]
-    },
-    {
-        "id": "683e8f2f.c319e",
-        "type": "blynk-ws-out-write",
-        "z": "655a383f.d28688",
-        "name": "Pin V0 - Temp",
-        "pin": "0",
-        "pinmode": 0,
-        "client": "55bb7b9f.977214",
-        "x": 300,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "d9d05060.ba991",
-        "type": "blynk-ws-out-write",
-        "z": "655a383f.d28688",
-        "name": "Pin V1 - Humiditiy",
-        "pin": "1",
-        "pinmode": 0,
-        "client": "55bb7b9f.977214",
-        "x": 310,
-        "y": 280,
-        "wires": []
     },
     {
         "id": "95ed0ce0.28e43",
@@ -485,28 +459,15 @@
         "datatype": "auto",
         "broker": "6ec149ab.f03fb8",
         "x": 70,
-        "y": 520,
+        "y": 580,
         "wires": [
             [
-                "fdf40835.ab28f8",
                 "4e18e209.7b7e4c",
                 "80975542.bb0c18",
                 "fd35b98b.964148",
                 "dad7d012.cf2ee"
             ]
         ]
-    },
-    {
-        "id": "fdf40835.ab28f8",
-        "type": "blynk-ws-out-write",
-        "z": "655a383f.d28688",
-        "name": "Pin V2 - LED",
-        "pin": "3",
-        "pinmode": 0,
-        "client": "55bb7b9f.977214",
-        "x": 290,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "ce045c34.9128",
@@ -547,7 +508,7 @@
         "z": "2fcd0b9b.e070b4",
         "name": "",
         "topic": "",
-        "payload": "{\"BIGML_USERNAME\":\"USERNAME\",\"BIGML_API_KEY\":\"KEY\",\"BIGML_AUTH\":\"username=username;api_key=key\"}",
+        "payload": "{\"BIGML_USERNAME\":\"yourusername\",\"BIGML_API_KEY\":\"yourapikey\",\"BIGML_AUTH\":\"username=yourusername;api_key=yourapikey\"}",
         "payloadType": "json",
         "repeat": "",
         "crontab": "",
@@ -576,7 +537,7 @@
         "disable_datetime": false,
         "data": "",
         "term_analysis": "",
-        "x": 220,
+        "x": 200,
         "y": 80,
         "wires": [
             [
@@ -607,7 +568,7 @@
         "lisp_filter": "",
         "description": "My First BigML Node-Red dataset",
         "input_fields": "",
-        "x": 320,
+        "x": 300,
         "y": 120,
         "wires": [
             [
@@ -652,7 +613,7 @@
         "sample_rate": 1,
         "support_threshold": 0,
         "input_fields": "",
-        "x": 420,
+        "x": 380,
         "y": 160,
         "wires": [
             [
@@ -668,7 +629,7 @@
         "input_keypath": "",
         "output_keypath": "",
         "reify": true,
-        "x": 490,
+        "x": 450,
         "y": 200,
         "wires": [
             [
@@ -690,7 +651,7 @@
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 590,
+        "x": 530,
         "y": 240,
         "wires": []
     },
@@ -732,7 +693,7 @@
         "type": "debug",
         "z": "655a383f.d28688",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -780,7 +741,7 @@
         "type": "debug",
         "z": "655a383f.d28688",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -798,8 +759,8 @@
         "func": "var originalPayload = msg.payload;\nvar newPayload = {};\nnewPayload.Irrigation = originalPayload;\nmsg.payload = newPayload;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 220,
-        "y": 400,
+        "x": 300,
+        "y": 460,
         "wires": [
             [
                 "86a031a4.cb474"
@@ -815,8 +776,8 @@
         "document": "",
         "operation": "add",
         "admin": "8e403b51.f1cb08",
-        "x": 470,
-        "y": 420,
+        "x": 490,
+        "y": 460,
         "wires": [
             [
                 "7cde34f6.55c81c"
@@ -828,14 +789,14 @@
         "type": "debug",
         "z": "655a383f.d28688",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "payload",
         "targetType": "msg",
-        "x": 630,
-        "y": 420,
+        "x": 650,
+        "y": 460,
         "wires": []
     },
     {
@@ -856,7 +817,7 @@
         "max": "50",
         "step": 1,
         "x": 170,
-        "y": 80,
+        "y": 100,
         "wires": [
             [
                 "8249e427.a6fac8",
@@ -881,8 +842,8 @@
         "min": 0,
         "max": "100",
         "step": 1,
-        "x": 160,
-        "y": 160,
+        "x": 220,
+        "y": 200,
         "wires": [
             [
                 "8e7e28b5.f38268",
@@ -899,7 +860,7 @@
         "qos": "2",
         "retain": "",
         "broker": "6ec149ab.f03fb8",
-        "x": 670,
+        "x": 810,
         "y": 500,
         "wires": []
     },
@@ -907,16 +868,15 @@
         "id": "b70ba59f.ddd6d8",
         "type": "function",
         "z": "e53eb36.dc9b85",
-        "name": "",
+        "name": "If humidity < 30 Turn ON - Else Turn Off",
         "func": "if(msg.payload < \"30\"){\n    msg.payload = \"1\";\n}\nelse{\n    msg.payload = \"0\";\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 430,
+        "x": 540,
         "y": 540,
         "wires": [
             [
-                "13daf2bf.26319d",
-                "404f27f4.48f528"
+                "13daf2bf.26319d"
             ]
         ]
     },
@@ -924,16 +884,15 @@
         "id": "558c5fe3.6528a",
         "type": "function",
         "z": "e53eb36.dc9b85",
-        "name": "",
+        "name": "If temp > 30 Turn ON - Else Turn Off",
         "func": "if(msg.payload > \"30\"){\n    msg.payload = \"1\";\n}\nelse{\n    msg.payload = \"0\";\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 430,
+        "x": 530,
         "y": 460,
         "wires": [
             [
-                "13daf2bf.26319d",
-                "93a21fc.9b928e"
+                "13daf2bf.26319d"
             ]
         ]
     },
@@ -959,8 +918,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 400,
-        "y": 60,
+        "x": 540,
+        "y": 40,
         "wires": []
     },
     {
@@ -985,8 +944,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 380,
-        "y": 160,
+        "x": 520,
+        "y": 140,
         "wires": []
     },
     {
@@ -999,8 +958,8 @@
         "method": "set",
         "value": "msg.payload",
         "priority": "msg.priority",
-        "x": 420,
-        "y": 100,
+        "x": 560,
+        "y": 80,
         "wires": [
             []
         ]
@@ -1015,8 +974,8 @@
         "method": "set",
         "value": "msg.payload",
         "priority": "msg.priority",
-        "x": 410,
-        "y": 200,
+        "x": 550,
+        "y": 180,
         "wires": [
             []
         ]
@@ -1035,7 +994,9 @@
         "y": 440,
         "wires": [
             [
-                "558c5fe3.6528a"
+                "558c5fe3.6528a",
+                "d2883699.5ea258",
+                "4c4cc34c.31486c"
             ]
         ]
     },
@@ -1053,7 +1014,9 @@
         "y": 520,
         "wires": [
             [
-                "b70ba59f.ddd6d8"
+                "b70ba59f.ddd6d8",
+                "fd66dce6.b2c4a",
+                "9e488214.0f96e"
             ]
         ]
     },
@@ -1097,7 +1060,8 @@
         "y": 280,
         "wires": [
             [
-                "b2003771.c34f68"
+                "b2003771.c34f68",
+                "3407c832.fae108"
             ]
         ]
     },
@@ -1109,8 +1073,8 @@
         "func": "var originalPayload = msg.payload;\nvar newPayload = {};\nnewPayload.Temperature = originalPayload;\nmsg.payload = newPayload;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 200,
-        "y": 320,
+        "x": 160,
+        "y": 540,
         "wires": [
             []
         ]
@@ -1125,8 +1089,8 @@
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 710,
-        "y": 380,
+        "x": 670,
+        "y": 600,
         "wires": []
     },
     {
@@ -1139,8 +1103,8 @@
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 620,
-        "y": 320,
+        "x": 580,
+        "y": 540,
         "wires": [
             [
                 "fac53cc4.0a93e"
@@ -1159,8 +1123,8 @@
         "ret": "\\n",
         "temp": "temp,humidity",
         "skip": "1",
-        "x": 390,
-        "y": 360,
+        "x": 350,
+        "y": 580,
         "wires": [
             [
                 "dbc48b87.c2de28"
@@ -1175,8 +1139,8 @@
         "func": "var originalPayload = msg.payload;\nvar newPayload = {};\nnewPayload.Humidity = originalPayload;\nmsg.payload = newPayload;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 200,
-        "y": 380,
+        "x": 160,
+        "y": 600,
         "wires": [
             []
         ]
@@ -1190,8 +1154,8 @@
         "document": "",
         "operation": "add",
         "admin": "8e403b51.f1cb08",
-        "x": 390,
-        "y": 440,
+        "x": 350,
+        "y": 660,
         "wires": [
             []
         ]
@@ -1232,7 +1196,7 @@
         ],
         "useOldStyle": false,
         "outputs": 1,
-        "x": 890,
+        "x": 310,
         "y": 200,
         "wires": [
             []
@@ -1274,8 +1238,8 @@
         ],
         "useOldStyle": false,
         "outputs": 1,
-        "x": 880,
-        "y": 300,
+        "x": 300,
+        "y": 380,
         "wires": [
             []
         ]
@@ -1316,8 +1280,8 @@
         ],
         "useOldStyle": false,
         "outputs": 1,
-        "x": 880,
-        "y": 440,
+        "x": 280,
+        "y": 600,
         "wires": [
             []
         ]
@@ -1344,7 +1308,7 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 900,
+        "x": 440,
         "y": 160,
         "wires": []
     },
@@ -1370,8 +1334,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 880,
-        "y": 260,
+        "x": 400,
+        "y": 340,
         "wires": []
     },
     {
@@ -1396,40 +1360,102 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 880,
-        "y": 380,
+        "x": 400,
+        "y": 560,
         "wires": []
     },
     {
-        "id": "93a21fc.9b928e",
-        "type": "ui_text",
+        "id": "fe05c16e.20fda",
+        "type": "blynk-ws-in-write",
         "z": "e53eb36.dc9b85",
-        "group": "9fac8f6c.40c3c",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
+        "name": "Temperature Slider",
+        "pin": "3",
+        "pin_all": 0,
+        "client": "55bb7b9f.977214",
+        "x": 190,
+        "y": 40,
+        "wires": [
+            [
+                "a5eb7379.3f8a",
+                "8249e427.a6fac8"
+            ]
+        ]
+    },
+    {
+        "id": "f408e9a6.f1dd98",
+        "type": "blynk-ws-in-write",
+        "z": "e53eb36.dc9b85",
+        "name": "Humidity Slider",
+        "pin": "4",
+        "pin_all": 0,
+        "client": "55bb7b9f.977214",
+        "x": 200,
+        "y": 140,
+        "wires": [
+            [
+                "8e7e28b5.f38268",
+                "dcbc9088.49d95"
+            ]
+        ]
+    },
+    {
+        "id": "d2883699.5ea258",
+        "type": "blynk-ws-out-write",
+        "z": "e53eb36.dc9b85",
+        "name": "Pin V0 - Temp",
+        "pin": "0",
+        "pinmode": 0,
+        "client": "55bb7b9f.977214",
+        "x": 560,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "fd66dce6.b2c4a",
+        "type": "blynk-ws-out-write",
+        "z": "e53eb36.dc9b85",
+        "name": "Pin V1 - Humiditiy",
+        "pin": "1",
+        "pinmode": 0,
+        "client": "55bb7b9f.977214",
         "x": 570,
-        "y": 420,
+        "y": 580,
         "wires": []
     },
     {
-        "id": "404f27f4.48f528",
-        "type": "ui_text",
+        "id": "3407c832.fae108",
+        "type": "blynk-ws-out-write",
         "z": "e53eb36.dc9b85",
-        "group": "438111e.aeb0bf",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
+        "name": "Pin V2 - LED",
+        "pin": "2",
+        "pinmode": 0,
+        "client": "55bb7b9f.977214",
+        "x": 390,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4c4cc34c.31486c",
+        "type": "blynk-ws-out-write",
+        "z": "e53eb36.dc9b85",
+        "name": "Temperature Slider Write",
+        "pin": "3",
+        "pinmode": 0,
+        "client": "55bb7b9f.977214",
+        "x": 670,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "9e488214.0f96e",
+        "type": "blynk-ws-out-write",
+        "z": "e53eb36.dc9b85",
+        "name": "Humidity Slider Write",
+        "pin": "4",
+        "pinmode": 0,
+        "client": "55bb7b9f.977214",
         "x": 580,
-        "y": 600,
+        "y": 640,
         "wires": []
     }
 ]
