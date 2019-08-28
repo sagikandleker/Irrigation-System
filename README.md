@@ -68,3 +68,7 @@ const int LEDPin = REPLACE_WITH_YOUR_ESP32_PIN_CONNECTION;
 | Blynk | Test-Mode-UI |
 |:-:|:-:|
 | ![Third](/Images/Blynk.jpg?raw=true) | ![Fourth](/Images/Test_Mode.JPG?raw=true) |
+
+| Hardware | Machine Learning |
+|:-:|:-:|
+| ![Five](/Images/ESP32_DHT11.jpg?raw=true) | ![Six](/Images/BigML.JPG?raw=true) |
