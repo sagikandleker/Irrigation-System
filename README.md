@@ -61,14 +61,14 @@ const int LEDPin = REPLACE_WITH_YOUR_ESP32_PIN_CONNECTION;
 ```
 
 # 4. Screenshots
-| Node-Red | Live-Mode-UI |
+| MQTT Broker with Firebase | Live Mode UI |
 |:-:|:-:|
 | ![First](/Images/MQTT_Node_RED.JPG?raw=tru) | ![Sec](/Images/Live_Mode.JPG?raw=tru) |
 
-| Blynk | Test-Mode-UI |
+| Blynk | Test Mode UI |
 |:-:|:-:|
 | ![Third](/Images/Blynk.jpg?raw=true) | ![Fourth](/Images/Test_Mode.JPG?raw=true) |
 
-| Hardware | Machine Learning |
+| Hardware | MQTT Call Back |
 |:-:|:-:|
-| ![Five](/Images/ESP32_DHT11.jpg?raw=true) | ![Six](/Images/BigML.JPG?raw=true) |
+| ![Five](/Images/ESP32_DHT11.jpg?raw=true) | ![Six](/Images/MQTT_Call_Back.JPG?raw=true) |
