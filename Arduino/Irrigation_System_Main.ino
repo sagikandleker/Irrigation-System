@@ -70,7 +70,7 @@ void callback(String topic, byte* message, unsigned int length) {
   }
   //Serial.println();
 
-  // If a message is received on the topic flower/LEDPin, you check if the message is either on or off. 
+  // If a message is received on the topic flower/lamp, you check if the message is either on or off. 
   //Turns the LEDPin GPIO according to the message
   if(topic=="flower/lamp"){
       //Serial.print("Changing LEDPin to ");
@@ -89,7 +89,7 @@ void callback(String topic, byte* message, unsigned int length) {
         //Serial.print("Off");
       }
   }
-  //Serial.println();
+  Serial.println();
 }
 
   // This functions reconnects your ESP32 to your MQTT broker
@@ -114,7 +114,7 @@ void reconnect() {
       Serial.println("connected");  
       // Subscribe or resubscribe to a topic
       // You can subscribe to more topics (to control more LEDs in this example)
-      client.subscribe("flower/LEDPin");
+      client.subscribe("flower/lamp");
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
@@ -199,4 +199,4 @@ void loop() {
     Serial.print(hic);
     Serial.println(" *C ");
   }
-} 
+}
