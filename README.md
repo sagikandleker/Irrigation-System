@@ -61,10 +61,10 @@ const int LEDPin = REPLACE_WITH_YOUR_ESP32_PIN_CONNECTION;
 ```
 
 # 4. Screenshots
-| Node-Red | UI |
+| Node-Red | Live-Mode-UI |
 |:-:|:-:|
-| ![First](/Images/loginpage.JPG?raw=tru) | ![Sec](/Images/registerpage.JPG?raw=tru) |
+| ![First](/Images/MQTT_Node_RED.JPG?raw=tru) | ![Sec](/Images/Live_Mode.JPG?raw=tru) |
 
-| Blynk | Firebase |
+| Blynk | Test-Mode-UI |
 |:-:|:-:|
-| ![Third](/Images/mainpage.JPG?raw=true) | ![Fourth](/Images/productpage.JPG?raw=true) |
+| ![Third](/Images/Blynk.jpg?raw=true) | ![Fourth](/Images/Test_Mode.JPG?raw=true) |
